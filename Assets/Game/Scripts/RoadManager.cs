@@ -9,13 +9,19 @@ public class RoadManager : MonoBehaviour
     [SerializeField] private GameObject myRoad;
     [SerializeField] private Transform parent;
     [SerializeField] private List<GameObject> roads;
-    [SerializeField] private List<Transform> roadPath;
+    [SerializeField] public  List<Vector3> roadPath;
+    private static RoadManager instance;
+    public static RoadManager Instance => instance ?? (instance = instance = FindObjectOfType<RoadManager>());
 
     [BoxGroup("Road Settings")]
     public float roadLength = 14f;
     [BoxGroup("Road Settings")]
     public int roadCount;
-
+    private void Awake()
+    {
+        instance = instance ??= this;
+        Debug.Log(instance);
+    }
 
     [Button("Create")]
     private void CreateRoad()
@@ -24,7 +30,7 @@ public class RoadManager : MonoBehaviour
         var roadPosition = index * (Vector3.forward*roadLength);
         var newRoad = Instantiate(myRoad, roadPosition, Quaternion.identity, parent);
         roads.Add(newRoad);
-        roadPath.Add(newRoad.transform);
+        roadPath.Add(newRoad.transform.position);
 
     }
     
