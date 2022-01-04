@@ -5,5 +5,6 @@ public class PlayerData : ScriptableObject
 {
     public float forwardSpeed;
     public float swerveSpeed;
+   
 }
 
