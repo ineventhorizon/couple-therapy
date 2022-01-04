@@ -7,12 +7,9 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
     [SerializeField] private Transform sideMovementRoot;
-    //[SerializeField] private Transform couple;
-
 
     void Update()
     {
-        //HandleMovements();
         HandleSideMovement();
     }
     private void Start()
@@ -29,27 +26,5 @@ public class PlayerController : MonoBehaviour
         currentPos.x += swerveAmount;
         currentPos.x = Mathf.Clamp(currentPos.x, -4, 4f);
         this.sideMovementRoot.localPosition = currentPos;
-    }
-    private void HandleMovements()
-    {
-        float forwardMove = playerData.forwardSpeed * Time.deltaTime;
-        float swerveAmount = Time.deltaTime * playerData.swerveSpeed * InputManager.Instance.MoveFactorX;
-
-        Vector3 position = CalculatePosition(forwardMove, swerveAmount);
-
-        transform.position = position;
-        //couple.transform.position = position;
-
-    }
-
-    private Vector3 CalculatePosition(float forward, float xSwerve)
-    {
-        var currentPos = this.transform.position;
-        currentPos.z += forward;
-
-        currentPos.x += xSwerve;
-        currentPos.x = Mathf.Clamp(currentPos.x, -4, 4f);
-        
-        return currentPos;
     }
 }
