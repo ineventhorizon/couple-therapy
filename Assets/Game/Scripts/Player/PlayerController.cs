@@ -8,15 +8,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerData playerData;
     [SerializeField] private Transform sideMovementRoot;
 
-    void Update()
-    {
-        HandleSideMovement();
-    }
     private void Start()
     {
         transform.DOPath(RoadManager.Instance.roadPath.ToArray(), playerData.forwardSpeed, PathType.Linear)
             .SetSpeedBased()
             .SetEase(Ease.Linear);
+    }
+
+    void Update()
+    {
+        HandleSideMovement();
     }
 
     private void HandleSideMovement()
@@ -26,5 +27,20 @@ public class PlayerController : MonoBehaviour
         currentPos.x += swerveAmount;
         currentPos.x = Mathf.Clamp(currentPos.x, -4, 4f);
         this.sideMovementRoot.localPosition = currentPos;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("GoodCollectable"))
+        {
+            // TODO Couple Progress Bar Increased
+            UIManager.Instance.UpdateLove(4);
+        }
+        if (other.gameObject.CompareTag("BadCollectable"))
+        {
+            // TODO Couple Progress Bar Decreased
+            UIManager.Instance.UpdateLove(-2);
+
+        }
     }
 }
