@@ -35,12 +35,13 @@ public class PlayerController : MonoBehaviour
         {
             // TODO Couple Progress Bar Increased
             UIManager.Instance.UpdateLove(4);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("BadCollectable"))
         {
             // TODO Couple Progress Bar Decreased
             UIManager.Instance.UpdateLove(-2);
-
+            Destroy(other.gameObject);
         }
     }
 }

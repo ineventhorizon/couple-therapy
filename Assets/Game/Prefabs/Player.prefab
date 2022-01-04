@@ -78,7 +78,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 7f2763c6f839a2a448d7638d24134103, type: 2}
   sideMovementRoot: {fileID: 1490397412767843683}
-  loveBar: {fileID: 0}
 --- !u!54 &848284705
 Rigidbody:
   m_ObjectHideFlags: 0
