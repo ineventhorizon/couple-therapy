@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd700a3c782e1c439d3ed9f52dd4832, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  forwardSpeed: 5
-  swerveSpeed: 1.5
-  maxSwerveAmount: 3
+  forwardSpeed: 10
+  swerveSpeed: 2

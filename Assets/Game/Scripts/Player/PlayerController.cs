@@ -15,12 +15,24 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovements()
     {
-        Vector3 forwardMove = Vector3.forward * playerData.forwardSpeed * Time.deltaTime;
+        float forwardMove = playerData.forwardSpeed * Time.deltaTime;
         float swerveAmount = Time.deltaTime * playerData.swerveSpeed * inputManager.MoveFactorX;
 
-        swerveAmount = Mathf.Clamp(swerveAmount, -playerData.maxSwerveAmount, playerData.maxSwerveAmount);
-        transform.Translate(swerveAmount, 0, forwardMove.z);
-        couple.transform.Translate(swerveAmount,0,forwardMove.z);
+        Vector3 position = CalculatePosition(forwardMove, swerveAmount);
 
+        transform.position = position;
+        couple.transform.position = position;
+
+    }
+
+    private Vector3 CalculatePosition(float forward, float xSwerve)
+    {
+        var currentPos = this.transform.position;
+        currentPos.z += forward;
+
+        currentPos.x += xSwerve;
+        currentPos.x = Mathf.Clamp(currentPos.x, -4, 4f);
+        
+        return currentPos;
     }
 }
