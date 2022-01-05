@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c2f4204919d5b764c9bf65511bee3a55
+guid: 9909bb38ab5c4a44aae914ad04d19537
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Rose_Leaves
+    second: {fileID: 2100000, guid: acc7b24f04fe1a549bcb8bae3658384c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rose_Stem
+    second: {fileID: 2100000, guid: a84ffadccca885a44964eb650bcbc40b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: heart
-    second: {fileID: 2100000, guid: ffee49feeb88e3944a83ab9e00d07f14, type: 2}
+    second: {fileID: 2100000, guid: 9021b33730b67cb49b82b2a6384027c5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

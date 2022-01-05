@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
     [SerializeField] private Transform sideMovementRoot;
-    [SerializeField] private float leftLimit, rightLimit;
+    [SerializeField] private float moveLimit;
 
     private void Start()
     {
@@ -26,10 +26,11 @@ public class PlayerController : MonoBehaviour
         float swerveAmount = playerData.swerveSpeed * InputManager.Instance.MoveFactorX;
         var currentPos = this.sideMovementRoot.localPosition;
         currentPos.x += swerveAmount;
-        currentPos.x = Mathf.Clamp(currentPos.x, -leftLimit, rightLimit);
+        currentPos.x = Mathf.Clamp(currentPos.x, -moveLimit, moveLimit);
         this.sideMovementRoot.localPosition = currentPos;
     }
 
+    // TODO : fix the hardcode 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("GoodCollectable"))
@@ -42,6 +43,16 @@ public class PlayerController : MonoBehaviour
         {
             // TODO Couple Progress Bar Decreased
             UIManager.Instance.UpdateLove(-2);
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("GoodGift"))
+        {
+            UIManager.Instance.UpdateLove(3);
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("BadGift"))
+        {
+            UIManager.Instance.UpdateLove(-3);
             Destroy(other.gameObject);
         }
     }

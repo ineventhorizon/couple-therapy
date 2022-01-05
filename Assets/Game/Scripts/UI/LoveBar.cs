@@ -28,6 +28,7 @@ public class LoveBar : MonoBehaviour
     public void UpdateLoveBar(float value)
     {
         currLove += value;
+        if (currLove > maxLove) currLove = maxLove;
         var loveAmount = currLove / maxLove;
 
         PopUpText(loveAmount);
@@ -35,6 +36,7 @@ public class LoveBar : MonoBehaviour
         loveBar.color = gradient.Evaluate(loveAmount);
     }
 
+    // TODO : fix the hardcode (Yemekten sonra duzelticem :)
     private void PopUpText(float loveAmount)
     {
 
@@ -53,7 +55,7 @@ public class LoveBar : MonoBehaviour
             loveBarText.text = "CASUAL";
             loveBarText.color = textColors[2];
         }
-        else if (0.7 < loveAmount && loveAmount <= 0.9f)
+        else if (0.7 < loveAmount && loveAmount <= 0.95f)
         {
             loveBarText.text = "LIKING";
             loveBarText.color = textColors[3];
