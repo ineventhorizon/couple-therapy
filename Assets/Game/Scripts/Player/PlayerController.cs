@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
     [SerializeField] private Transform sideMovementRoot;
+    [SerializeField] private float leftLimit, rightLimit;
 
     private void Start()
     {
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
         float swerveAmount = playerData.swerveSpeed * InputManager.Instance.MoveFactorX;
         var currentPos = this.sideMovementRoot.localPosition;
         currentPos.x += swerveAmount;
-        currentPos.x = Mathf.Clamp(currentPos.x, -4, 4f);
+        currentPos.x = Mathf.Clamp(currentPos.x, -leftLimit, rightLimit);
         this.sideMovementRoot.localPosition = currentPos;
     }
 

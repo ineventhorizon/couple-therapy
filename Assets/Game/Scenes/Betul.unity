@@ -1402,6 +1402,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 848284702}
+    - target: {fileID: 477457641, guid: bc5599a5c41b67a4abae0116b7386079, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5539509066161683044, guid: bc5599a5c41b67a4abae0116b7386079, type: 3}
       propertyPath: m_Name
       value: Couple
@@ -4291,6 +4295,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 848284705, guid: 497d1121199a7ee4eacbe537baa2090b, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3871260163027564181, guid: 497d1121199a7ee4eacbe537baa2090b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4334,6 +4342,14 @@ PrefabInstance:
     - target: {fileID: 3871260163027564181, guid: 497d1121199a7ee4eacbe537baa2090b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871260163027564182, guid: 497d1121199a7ee4eacbe537baa2090b, type: 3}
+      propertyPath: leftLimit
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871260163027564182, guid: 497d1121199a7ee4eacbe537baa2090b, type: 3}
+      propertyPath: rightLimit
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3871260163027564183, guid: 497d1121199a7ee4eacbe537baa2090b, type: 3}
       propertyPath: m_Name
