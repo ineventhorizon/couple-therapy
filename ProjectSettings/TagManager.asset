@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BadCollectable
   - GoodCollectable
+  - Gate
   layers:
   - Default
   - TransparentFX

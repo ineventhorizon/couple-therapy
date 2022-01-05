@@ -144,9 +144,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5855294872258099497}
   - component: {fileID: 5855294872258099496}
+  - component: {fileID: -4884821058822390781}
   m_Layer: 0
   m_Name: FemalePositiveGate
-  m_TagString: Untagged
+  m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,6 +184,19 @@ MonoBehaviour:
   textUI: {fileID: 2127272331811257086}
   gateText: {fileID: 11400000, guid: d477e7368a31fba49ad42c8ea4c6acf1, type: 2}
   textType: 0
+--- !u!65 &-4884821058822390781
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5855294872258099511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 5, z: 1}
+  m_Center: {x: 0, y: 3, z: 0}
 --- !u!1 &7509693035592691805
 GameObject:
   m_ObjectHideFlags: 0

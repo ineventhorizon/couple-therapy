@@ -39,4 +39,9 @@ public class Gate : MonoBehaviour
                 break;
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.collider.tag);
+    }
 }
