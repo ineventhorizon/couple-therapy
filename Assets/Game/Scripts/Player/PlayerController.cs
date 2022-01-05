@@ -29,31 +29,4 @@ public class PlayerController : MonoBehaviour
         currentPos.x = Mathf.Clamp(currentPos.x, -moveLimit, moveLimit);
         this.sideMovementRoot.localPosition = currentPos;
     }
-
-    // TODO : fix the hardcode 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("GoodCollectable"))
-        {
-            // TODO Couple Progress Bar Increased
-            UIManager.Instance.UpdateLove(4);
-            Destroy(other.gameObject);
-        }
-        if (other.gameObject.CompareTag("BadCollectable"))
-        {
-            // TODO Couple Progress Bar Decreased
-            UIManager.Instance.UpdateLove(-2);
-            Destroy(other.gameObject);
-        }
-        if (other.gameObject.CompareTag("GoodGift"))
-        {
-            UIManager.Instance.UpdateLove(3);
-            Destroy(other.gameObject);
-        }
-        if (other.gameObject.CompareTag("BadGift"))
-        {
-            UIManager.Instance.UpdateLove(-3);
-            Destroy(other.gameObject);
-        }
-    }
 }

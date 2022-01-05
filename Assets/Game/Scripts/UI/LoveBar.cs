@@ -28,19 +28,20 @@ public class LoveBar : MonoBehaviour
     public void UpdateLoveBar(float value)
     {
         currLove += value;
+        if (currLove < 0) currLove = 0;
         if (currLove > maxLove) currLove = maxLove;
-        var loveAmount = currLove / maxLove;
 
+        var loveAmount = currLove / maxLove;
+        
         PopUpText(loveAmount);
         loveBar.fillAmount = loveAmount;
         loveBar.color = gradient.Evaluate(loveAmount);
     }
 
-    // TODO : fix the hardcode (Yemekten sonra duzelticem :)
     private void PopUpText(float loveAmount)
     {
 
-        if (0.0f < loveAmount && loveAmount <= 0.2f)
+        if (loveAmount <= 0.2f)
         {
             loveBarText.text = "HATRED";
             loveBarText.color = textColors[0];
