@@ -279,8 +279,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f57d18de0cdb8146a94c902ac291936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  status: 0
-  text: {fileID: 4787376438870980147}
+  gateType: 0
+  textUI: {fileID: 4787376438870980147}
+  gateText: {fileID: 11400000, guid: d477e7368a31fba49ad42c8ea4c6acf1, type: 2}
+  textType: 0
 --- !u!1001 &4787376440166338026
 PrefabInstance:
   m_ObjectHideFlags: 0
