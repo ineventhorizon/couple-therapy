@@ -32,7 +32,7 @@ public class LoveBar : MonoBehaviour
         if (currLove > maxLove) currLove = maxLove;
 
         var loveAmount = currLove / maxLove;
-        
+
         PopUpText(loveAmount);
         loveBar.fillAmount = loveAmount;
         loveBar.color = gradient.Evaluate(loveAmount);
@@ -43,27 +43,27 @@ public class LoveBar : MonoBehaviour
 
         if (loveAmount <= 0.2f)
         {
-            loveBarText.text = "HATRED";
+            loveBarText.text = "FLIRT";
             loveBarText.color = textColors[0];
         }
         else if (0.2 < loveAmount && loveAmount <= 0.4f)
         {
-            loveBarText.text = "DOUBTFUL";
+            loveBarText.text = "LOVERS";
             loveBarText.color = textColors[1];
         }
         else if (0.4f < loveAmount && loveAmount <= 0.7f)
         {
-            loveBarText.text = "CASUAL";
+            loveBarText.text = "MOVE IN";
             loveBarText.color = textColors[2];
         }
         else if (0.7 < loveAmount && loveAmount <= 0.95f)
         {
-            loveBarText.text = "LIKING";
+            loveBarText.text = "ENGAGED";
             loveBarText.color = textColors[3];
         }
         else
         {
-            loveBarText.text = "IN LOVE";
+            loveBarText.text = "MARRIED";
             loveBarText.color = textColors[4];
         }
 
