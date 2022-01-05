@@ -3,7 +3,12 @@ guid: 8ec12846bbee92e4f875f1a192304274
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Broken_Heart
+    second: {fileID: 2100000, guid: de9b1a9e950b0904b8928632341f4716, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

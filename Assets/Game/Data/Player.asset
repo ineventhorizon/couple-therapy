@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   forwardSpeed: 22.18
-  swerveSpeed: 0.05
+  swerveSpeed: 0.015

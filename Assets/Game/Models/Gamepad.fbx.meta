@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c2f4204919d5b764c9bf65511bee3a55
+guid: 4274585273e08fd46bf9e7f5a6d2a767
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Broken_Heart
+    second: {fileID: 2100000, guid: cf634f29b9cc6274dbe22a93b0ee9efd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lacivert
+    second: {fileID: 2100000, guid: 5fd50edd364539c42bbad165da066fdd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange
+    second: {fileID: 2100000, guid: 2fb579668830c664a9ccaf64ca2e0ffa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rose_Stem
+    second: {fileID: 2100000, guid: 098f09a47f7b09b4a83678a9b18985f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tree_Blue
+    second: {fileID: 2100000, guid: 570c3d9000563d548901e9069ddcf04d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: heart
-    second: {fileID: 2100000, guid: ffee49feeb88e3944a83ab9e00d07f14, type: 2}
+    second: {fileID: 2100000, guid: 6341adcbd11225c4a93e4af07730a667, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

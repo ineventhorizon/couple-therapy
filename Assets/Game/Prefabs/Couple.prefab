@@ -241,7 +241,7 @@ MonoBehaviour:
     ctime0: 13107
     ctime1: 26214
     ctime2: 45875
-    ctime3: 58982
+    ctime3: 62258
     ctime4: 65535
     ctime5: 0
     ctime6: 0
@@ -667,6 +667,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0c688e22e2ac74d93c970ae8f52de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coupleSpeed: 5
   sideMovementRoot: {fileID: 7973567156545461784}
   player: {fileID: 0}

@@ -6,7 +6,12 @@ TagManager:
   tags:
   - BadCollectable
   - GoodCollectable
+<<<<<<< HEAD
   - Gate
+=======
+  - GoodGift
+  - BadGift
+>>>>>>> bd005921825679a5250717d2b2b0cad1c91cf85b
   layers:
   - Default
   - TransparentFX

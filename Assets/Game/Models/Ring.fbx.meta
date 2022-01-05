@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c2f4204919d5b764c9bf65511bee3a55
+guid: 2d698114444d50743ac177665bf372de
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: heart
-    second: {fileID: 2100000, guid: ffee49feeb88e3944a83ab9e00d07f14, type: 2}
+      name: Ring_Diamond
+    second: {fileID: 2100000, guid: 081091fa58c5ad24592aca59a3893e85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ring_Gold
+    second: {fileID: 2100000, guid: e1efc174c4d8aee41baa570c135b6eb4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
