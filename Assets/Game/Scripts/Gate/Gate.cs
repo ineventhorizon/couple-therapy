@@ -42,6 +42,11 @@ public class Gate : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.collider.tag);
+        if (collision.collider.CompareTag("Player"))
+        {
+            if (textType == TextType.Neutral) return;
+            var point = textType == TextType.Positive ? 3 : -3;
+            UIManager.Instance.UpdateLove(point);
+        }
     }
 }
