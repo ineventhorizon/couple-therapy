@@ -9,6 +9,8 @@ public class StartScreen : MonoBehaviour
     [SerializeField] private Image logoImage;
     [SerializeField] private Image tapToPlayImage;
     private static StartScreen instance;
+    private Sequence sequence;
+    private System.Guid uid;
     public static StartScreen Instance => instance ?? (instance = FindObjectOfType<StartScreen>());
     // Start is called before the first frame update
     private void Awake()
@@ -44,11 +46,16 @@ public class StartScreen : MonoBehaviour
     {
         this.gameObject.SetActive(true);
         this.enabled = true;
+        DOTween.Kill(uid);
+        sequence = null;
+
     }
 
     private void StartMenuAnimation()
     {
-        var sequence = DOTween.Sequence();
+        sequence = DOTween.Sequence();
+        uid = System.Guid.NewGuid();
+        sequence.id = uid;
         sequence.Append(tapToPlayImage.transform.DOScale(1.2f, 1f));
         sequence.SetLoops(-1, LoopType.Yoyo);
     }
