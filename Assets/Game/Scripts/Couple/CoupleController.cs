@@ -14,6 +14,5 @@ public class CoupleController : MonoBehaviour
     private void HandleSideMovements()
     {
         sideMovementRoot.position = Vector3.Lerp(player.position + Vector3.forward * 4f, sideMovementRoot.position, 0.6f);
-
     }
 }

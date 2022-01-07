@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using NaughtyAttributes;
 
 public class UIManager : MonoBehaviour
 {
@@ -22,16 +23,13 @@ public class UIManager : MonoBehaviour
 
     }
     #endregion
-    //[SerializeField] private LoveBar loveBar;
-
-    void Start()
+    public void DisableStartScreen()
     {
-        // TODO later on, set the maxlove via gamemanager or scriptableobject
-        //loveBar.SetMaxLove(30);
+        StartScreen.Instance.DisableStartScreen();
     }
 
-    public void UpdateLove(float value)
+    public void ActivateStartScreen()
     {
-        //loveBar.UpdateLoveBar(value);
+        StartScreen.Instance.ActivateStartScreen();
     }
 }
