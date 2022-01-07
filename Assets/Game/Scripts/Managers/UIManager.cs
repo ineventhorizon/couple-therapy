@@ -32,4 +32,14 @@ public class UIManager : MonoBehaviour
     {
         StartScreen.Instance.ActivateStartScreen();
     }
+
+    public void DisableEndScreen()
+    {
+        EndScreen.Instance.DisableEndScreen();
+    }
+
+    public void ActivateEndScreen()
+    {
+        EndScreen.Instance.ActivateEndScreen();
+    }
 }

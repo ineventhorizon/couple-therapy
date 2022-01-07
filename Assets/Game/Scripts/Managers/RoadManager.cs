@@ -6,6 +6,12 @@ using NaughtyAttributes;
 public class RoadManager : MonoBehaviour
 
 {
+    //TO DO
+    //THIS DOES NOT WORK WITH MULTIPLE SCENES WILL CHANGE
+    //THIS DOES NOT WORK WITH MULTIPLE SCENES WILL CHANGE
+    //THIS DOES NOT WORK WITH MULTIPLE SCENES WILL CHANGE
+    //THIS DOES NOT WORK WITH MULTIPLE SCENES WILL CHANGE
+    //THIS DOES NOT WORK WITH MULTIPLE SCENES WILL CHANGE
     [SerializeField] private GameObject myRoad;
     [SerializeField] private Transform parent;
     [SerializeField] private List<GameObject> roads;
