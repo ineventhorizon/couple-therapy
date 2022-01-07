@@ -46,7 +46,7 @@ public class Gate : MonoBehaviour
         {
             if (textType == TextType.Neutral) return;
             var point = textType == TextType.Positive ? 3 : -3;
-            UIManager.Instance.UpdateLove(point);
+            Observer.updateLove?.Invoke(point);
         }
     }
 }

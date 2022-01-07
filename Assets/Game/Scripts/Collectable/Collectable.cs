@@ -13,7 +13,7 @@ public class Collectable : MonoBehaviour
         {
             Destroy(this.gameObject);
             var tmpValue = type == CollectableType.Positive ? value : -value;
-            UIManager.Instance.UpdateLove(tmpValue);
+            Observer.updateLove?.Invoke(tmpValue);
         }
     }
 }

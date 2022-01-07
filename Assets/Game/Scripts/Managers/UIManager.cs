@@ -22,16 +22,16 @@ public class UIManager : MonoBehaviour
 
     }
     #endregion
-    [SerializeField] private LoveBar loveBar;
+    //[SerializeField] private LoveBar loveBar;
 
     void Start()
     {
         // TODO later on, set the maxlove via gamemanager or scriptableobject
-        loveBar.SetMaxLove(30);
+        //loveBar.SetMaxLove(30);
     }
 
     public void UpdateLove(float value)
     {
-        loveBar.UpdateLoveBar(value);
+        //loveBar.UpdateLoveBar(value);
     }
 }

@@ -19,6 +19,19 @@ public class LoveBar : MonoBehaviour
     [SerializeField] private TMP_Text loveBarText;
     [SerializeField] private List<Color> textColors;
 
+    private void OnEnable()
+    {
+        Observer.updateLove += UpdateLoveBar;
+    }
+    private void OnDisable()
+    {
+        Observer.updateLove -= UpdateLoveBar;
+    }
+
+    private void Start()
+    {
+        SetMaxLove(30);
+    }
 
     public void SetMaxLove(float value)
     {
