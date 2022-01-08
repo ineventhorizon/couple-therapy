@@ -26,15 +26,29 @@ public class UIParticle : MonoBehaviour
     [SerializeField] private bool isParticlePlay;
 
 
-    public void PlayParticle(CollectableType type)
+    public void PlayParticle(GameObject obj)
     {
-        if (type == CollectableType.Positive)
+        if (obj.tag == "Collectable")
         {
-            heart.Play();
+            if (obj.GetComponent<Collectable>().type == CollectableType.Positive)
+            {
+                heart.Play();
+            }
+            else
+            {
+                brokenHeart.Play();
+            }
         }
-        else
+        else if(obj.tag == "Gate")
         {
-            brokenHeart.Play();
+            if (obj.GetComponent<Gate>().gateType == GateType.Positive)
+            {
+                heart.Play();
+            }
+            else
+            {
+                brokenHeart.Play();
+            }
         }
     }
 }

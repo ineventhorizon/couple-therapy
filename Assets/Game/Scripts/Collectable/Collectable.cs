@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class Collectable : MonoBehaviour
 {
-    [SerializeField] private CollectableType type;
+    [SerializeField] public CollectableType type;
     [SerializeField] private float value;
     [SerializeField] Vector3 animationRot = new Vector3(0, 180, 0);
 
@@ -24,7 +24,7 @@ public class Collectable : MonoBehaviour
             Destroy(this.gameObject);
             var tmpValue = type == CollectableType.Positive ? value : -value;
             Observer.updateLove?.Invoke(tmpValue);
-            UIParticle.Instance.PlayParticle(type);
+            UIParticle.Instance.PlayParticle(this.gameObject);
         }
     }
 

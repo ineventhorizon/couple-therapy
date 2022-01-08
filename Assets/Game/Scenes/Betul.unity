@@ -355,22 +355,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 848284702}
-    - target: {fileID: 477457641, guid: bc5599a5c41b67a4abae0116b7386079, type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1147675892, guid: bc5599a5c41b67a4abae0116b7386079, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1147675892, guid: bc5599a5c41b67a4abae0116b7386079, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710720374573168496, guid: bc5599a5c41b67a4abae0116b7386079, type: 3}
-      propertyPath: m_text
-      value: asdads
-      objectReference: {fileID: 0}
     - target: {fileID: 5539509066161683044, guid: bc5599a5c41b67a4abae0116b7386079, type: 3}
       propertyPath: m_Name
       value: Couple
@@ -418,14 +402,6 @@ PrefabInstance:
     - target: {fileID: 5539509066161683045, guid: bc5599a5c41b67a4abae0116b7386079, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8165211089898903681, guid: bc5599a5c41b67a4abae0116b7386079, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8165211089898903681, guid: bc5599a5c41b67a4abae0116b7386079, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5599a5c41b67a4abae0116b7386079, type: 3}
@@ -7535,10 +7511,6 @@ PrefabInstance:
     - target: {fileID: 3871260163027564183, guid: 497d1121199a7ee4eacbe537baa2090b, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3871260163027564183, guid: 497d1121199a7ee4eacbe537baa2090b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 497d1121199a7ee4eacbe537baa2090b, type: 3}
@@ -19320,14 +19292,6 @@ PrefabInstance:
     - target: {fileID: 1265822202332509159, guid: 224616775f96fab4991d5c2707a5deaf, type: 3}
       propertyPath: m_Name
       value: FemaleNegativeGate
-      objectReference: {fileID: 0}
-    - target: {fileID: 6416563296544037462, guid: 224616775f96fab4991d5c2707a5deaf, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 6928737163715408965, guid: 224616775f96fab4991d5c2707a5deaf, type: 3}
-      propertyPath: m_text
-      value: Surprise birthday party
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 224616775f96fab4991d5c2707a5deaf, type: 3}
