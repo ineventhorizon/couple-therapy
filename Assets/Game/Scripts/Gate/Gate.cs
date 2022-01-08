@@ -6,7 +6,7 @@ public class Gate : MonoBehaviour
 {
     //[SerializeField] List<string> test;
     //false if negative, true if positive
-    [SerializeField] private GateType gateType;
+    [SerializeField] public GateType gateType;
     [SerializeField] private TextMeshProUGUI textUI;
     [SerializeField] private GateTexts gateText;
     [SerializeField] private TextType textType;
@@ -40,13 +40,14 @@ public class Gate : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider col)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (col.CompareTag("Player"))
         {
             if (textType == TextType.Neutral) return;
             var point = textType == TextType.Positive ? 3 : -3;
             Observer.updateLove?.Invoke(point);
+            UIParticle.Instance.PlayParticle(this.gameObject);
         }
     }
 }
