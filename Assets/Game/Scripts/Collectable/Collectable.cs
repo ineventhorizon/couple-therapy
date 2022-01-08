@@ -24,7 +24,7 @@ public class Collectable : MonoBehaviour
             Destroy(this.gameObject);
             var tmpValue = type == CollectableType.Positive ? value : -value;
             Observer.updateLove?.Invoke(tmpValue);
-            UIParticle.Instance.PlayParticle(this.gameObject);
+            Observer.PlayParticle?.Invoke(ParticleType.Collectable,(int)type);
         }
     }
 

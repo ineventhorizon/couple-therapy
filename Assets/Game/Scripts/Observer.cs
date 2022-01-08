@@ -9,4 +9,5 @@ public class Observer
     public static UnityAction startPlayerMovement;
     public static UnityAction startGame;
 
+    public static UnityAction<ParticleType, int> PlayParticle;
 }

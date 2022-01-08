@@ -25,30 +25,34 @@ public class UIParticle : MonoBehaviour
 
     [SerializeField] private bool isParticlePlay;
 
-
-    public void PlayParticle(GameObject obj)
+    private void OnEnable()
     {
-        if (obj.tag == "Collectable")
+        Observer.PlayParticle += Play;
+    }
+    private void OnDisable()
+    {
+        Observer.PlayParticle -= Play;
+
+    }
+    public void Play(ParticleType type, int particleIndex)
+    {
+        switch (type)
         {
-            if (obj.GetComponent<Collectable>().type == CollectableType.Positive)
-            {
-                heart.Play();
-            }
-            else
-            {
-                brokenHeart.Play();
-            }
+            case ParticleType.Gate:
+                PlayGateParticle(particleIndex);
+                break;
+            case ParticleType.Collectable:
+                PlayCollectableParticle(particleIndex);
+                break;
         }
-        else if(obj.tag == "Gate")
-        {
-            if (obj.GetComponent<Gate>().gateType == GateType.Positive)
-            {
-                heart.Play();
-            }
-            else
-            {
-                brokenHeart.Play();
-            }
-        }
+    }
+
+    private void PlayGateParticle(int particleIndex)
+    {
+        if(particleIndex == (int) CollectableType.Positive) heart.Play();
+    }
+    private void PlayCollectableParticle(int particleIndex)
+    {
+        if(particleIndex == (int) GateType.Positive) heart.Play();
     }
 }

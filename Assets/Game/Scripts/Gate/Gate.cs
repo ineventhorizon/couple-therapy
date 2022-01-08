@@ -47,7 +47,7 @@ public class Gate : MonoBehaviour
             if (textType == TextType.Neutral) return;
             var point = textType == TextType.Positive ? 3 : -3;
             Observer.updateLove?.Invoke(point);
-            UIParticle.Instance.PlayParticle(this.gameObject);
+            Observer.PlayParticle?.Invoke(ParticleType.Gate, (int)gateType);
         }
     }
 }
