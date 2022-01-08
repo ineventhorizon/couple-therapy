@@ -60,6 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   value: -2
+  brokenHeart: {fileID: 0}
 --- !u!1 &6636913272100878305
 GameObject:
   m_ObjectHideFlags: 0

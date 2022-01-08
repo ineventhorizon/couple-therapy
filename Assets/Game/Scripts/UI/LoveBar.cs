@@ -18,7 +18,7 @@ public class LoveBar : MonoBehaviour
     // Love Bar Text Variables
     [SerializeField] private TMP_Text loveBarText;
     [SerializeField] private List<Color> textColors;
-
+    
     private void OnEnable()
     {
         Observer.updateLove += UpdateLoveBar;
