@@ -70,13 +70,11 @@ public class AnimationManager : MonoBehaviour
 
     public void EnableReactions(GateType type)
     {
-        maleAnimator.SetLayerWeight(1, 1);
-        femaleAnimator.SetLayerWeight(1, 1);
         if (type == GateType.Positive)
         {
-            int randPosReaction = Random.Range(0,2);
+            int randPosReaction = Random.Range(0, 2);
             femaleAnimator.SetFloat("Reaction", (float)randPosReaction);
-            maleAnimator.SetFloat("Reaction", (float) randPosReaction);
+            maleAnimator.SetFloat("Reaction", (float)randPosReaction);
 
         }
         else
@@ -84,5 +82,18 @@ public class AnimationManager : MonoBehaviour
             femaleAnimator.SetFloat("Reaction", 3);
             maleAnimator.SetFloat("Reaction", 3);
         }
+
+        StartCoroutine(ReactionsRoutine());
+    }
+
+    IEnumerator ReactionsRoutine()
+    {
+        maleAnimator.SetLayerWeight(1, 1);
+        femaleAnimator.SetLayerWeight(1, 1);
+
+        yield return new WaitForSeconds(2f);
+
+        maleAnimator.SetLayerWeight(1, 0);
+        femaleAnimator.SetLayerWeight(1, 0);
     }
 }

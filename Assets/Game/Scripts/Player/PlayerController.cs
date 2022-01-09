@@ -86,7 +86,6 @@ public class PlayerController : MonoBehaviour
             }
             yield return null;
         }
-        AnimationManager.Instance.EnableWinAnim();
         GameManager.Instance.NextLevel();
     }
 }

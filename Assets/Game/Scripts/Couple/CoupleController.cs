@@ -29,6 +29,7 @@ public class CoupleController : MonoBehaviour
     private void FinalMoveAside()
     {
         reachedFinal = true;
+        sideMovementRoot.position = Vector3.Lerp(sideMovementRoot.position + Vector3.back * 5f, sideMovementRoot.position, 0.6f);
         AnimationManager.Instance.StopCoupleAnimation();
     }
 }
