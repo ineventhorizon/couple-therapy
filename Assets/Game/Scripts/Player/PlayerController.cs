@@ -11,13 +11,13 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         Observer.startPlayerMovement += StartMovement;
-        Observer.finalMoveTowards += FinalMoveTowards;
+        Observer.playerFinalWalk += FinalMoveTowards;
     }
 
     private void OnDisable()
     {
         Observer.startPlayerMovement -= StartMovement;
-        Observer.finalMoveTowards -= FinalMoveTowards;
+        Observer.playerFinalWalk -= FinalMoveTowards;
     }
 
     void Update()
@@ -56,11 +56,17 @@ public class PlayerController : MonoBehaviour
             .SetEase(Ease.Linear);
     }
 
-    private void FinalMoveTowards(Vector3 targetPosition)
+    private void FinalMoveTowards()
     {
+        GameManager.Instance.GameEnded();
+        Debug.Log("Game ended!");
+
+        var posOffSet = LoveBar.currLove * 3.5f;
+        var newPos = posOffSet * Vector3.forward;
+        var targetPosition = newPos;
         targetPosition += transform.position;
         StartCoroutine(MoveTowardsRoutine(targetPosition));
-       
+        
     }
 
     IEnumerator MoveTowardsRoutine(Vector3 targetPosition)
