@@ -11,11 +11,13 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         Observer.startPlayerMovement += StartMovement;
+        Observer.finalMoveTowards += FinalMoveTowards;
     }
 
     private void OnDisable()
     {
         Observer.startPlayerMovement -= StartMovement;
+        Observer.finalMoveTowards -= FinalMoveTowards;
     }
 
     void Update()
@@ -52,5 +54,32 @@ public class PlayerController : MonoBehaviour
         transform.DOPath(RoadManager.Instance.roadPath.ToArray(), playerData.forwardSpeed, PathType.Linear)
             .SetSpeedBased()
             .SetEase(Ease.Linear);
+    }
+
+    private void FinalMoveTowards(Vector3 targetPosition)
+    {
+        targetPosition += transform.position;
+        StartCoroutine(MoveTowardsRoutine(targetPosition));
+       
+    }
+
+    IEnumerator MoveTowardsRoutine(Vector3 targetPosition)
+    {
+        if (LoveBar.currLove == 0)
+        {
+            GameManager.Instance.GameOver();
+            yield break;
+        }
+        while (true)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * playerData.forwardSpeed);
+            float distanceLeft = (transform.position - targetPosition).magnitude;
+            if (distanceLeft < 0.001f)
+            {
+                break;
+            }
+            yield return null;
+        }
+        GameManager.Instance.NextLevel();
     }
 }

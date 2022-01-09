@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
 
-public class UIManager : MonoBehaviour
+public class UIManager : UIBase
 {
     #region Singleton
     private static UIManager instance;
@@ -20,26 +20,25 @@ public class UIManager : MonoBehaviour
         {
             instance = this;
         }
-
     }
     #endregion
     public void DisableStartScreen()
     {
-        StartScreen.Instance.DisableStartScreen();
+        StartScreen.Instance.DisablePanel();
     }
 
     public void ActivateStartScreen()
     {
-        StartScreen.Instance.ActivateStartScreen();
+        StartScreen.Instance.EnablePanel();
     }
 
     public void DisableEndScreen()
     {
-        EndScreen.Instance.DisableEndScreen();
+        EndScreen.Instance.DisablePanel();
     }
 
     public void ActivateEndScreen()
     {
-        EndScreen.Instance.ActivateEndScreen();
+        EndScreen.Instance.EnablePanel();
     }
 }

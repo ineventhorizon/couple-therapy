@@ -49,7 +49,7 @@ MonoBehaviour:
   roadData: {fileID: 11400000, guid: b5e880737e012fc499730ebed512e91f, type: 2}
   finalRenderer: {fileID: 4914313438469270830}
   multiplierText: {fileID: 5134973515012200080}
-  isFinal: 1
+  isFinal: 0
 --- !u!65 &8569270377215200968
 BoxCollider:
   m_ObjectHideFlags: 0
