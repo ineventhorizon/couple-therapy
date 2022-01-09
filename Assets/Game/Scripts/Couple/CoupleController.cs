@@ -28,7 +28,7 @@ public class CoupleController : MonoBehaviour
 
     private void FinalMoveAside()
     {
-        
-        
+        reachedFinal = true;
+        AnimationManager.Instance.StopCoupleAnimation();
     }
 }

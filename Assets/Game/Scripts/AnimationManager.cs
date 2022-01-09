@@ -80,7 +80,7 @@ public class AnimationManager : MonoBehaviour
             maleAnimator.SetFloat("Reaction", 1);
         }
 
-        
+
         maleAnimator.SetLayerWeight(1, 1);
         femaleAnimator.SetLayerWeight(1, 1);
     }

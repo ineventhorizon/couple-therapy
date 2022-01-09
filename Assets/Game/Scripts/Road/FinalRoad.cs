@@ -27,6 +27,7 @@ public class FinalRoad : MonoBehaviour
             if (isFinal)
             {
                 Observer.playerFinalWalk?.Invoke(); 
+                Observer.coupleFinalWalk?.Invoke();
             }
             Debug.Log($"Multiplier {roadData.multiplier}");
             
