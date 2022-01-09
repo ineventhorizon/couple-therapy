@@ -33,6 +33,11 @@ public class StartScreen : UIBase
         StartMenuAnimation();
     }
 
+    private void OnDisable()
+    {
+        DOTween.Kill(uid);
+    }
+
     private void StartMenuAnimation()
     {
         sequence = DOTween.Sequence();
