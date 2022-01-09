@@ -20,8 +20,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(GameManager.Instance.isGameRunning) HandleSideMovement();
-
+        if (GameManager.Instance.isGameRunning)
+        {
+            HandleSideMovement();
+            HandleForwardMovement();
+        }
     }
 
     private void HandleSideMovement()
@@ -34,6 +37,17 @@ public class PlayerController : MonoBehaviour
     }
 
    private void StartMovement()
+    {
+        //FollowPath();
+    }
+
+    private void HandleForwardMovement()
+    {
+        var forward = Vector3.forward * playerData.forwardSpeed * Time.deltaTime;
+        transform.position += forward;
+    }
+
+    private void FollowPath()
     {
         transform.DOPath(RoadManager.Instance.roadPath.ToArray(), playerData.forwardSpeed, PathType.Linear)
             .SetSpeedBased()

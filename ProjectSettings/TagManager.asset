@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gate
   - Collectable
+  - FinalRoad
   layers:
   - Default
   - TransparentFX
