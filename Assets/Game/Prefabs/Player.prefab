@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 3871260163027564181}
   - component: {fileID: 3871260163027564182}
   - component: {fileID: 848284705}
+  - component: {fileID: 7379524737347680665}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -95,6 +96,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!95 &7379524737347680665
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3871260163027564183}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 5d12e4f747efc654498da107d4f1a1ac, type: 3}
+  m_Controller: {fileID: 9100000, guid: 0c706e4939cd4e84ebf8c1da2ad6e928, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3871260164809580979
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +125,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3871260164809580978}
   - component: {fileID: 3871260164809580977}
-  - component: {fileID: 2071875965}
   m_Layer: 0
   m_Name: PlayerVisual
   m_TagString: Player
@@ -142,25 +161,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!95 &2071875965
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3871260164809580979}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5d12e4f747efc654498da107d4f1a1ac, type: 3}
-  m_Controller: {fileID: 9100000, guid: 0c706e4939cd4e84ebf8c1da2ad6e928, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1120674957
 PrefabInstance:
   m_ObjectHideFlags: 0

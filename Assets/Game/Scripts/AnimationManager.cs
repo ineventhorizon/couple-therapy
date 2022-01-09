@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
+    
     #region Singleton
     private static AnimationManager instance;
     public static AnimationManager Instance => instance ?? (instance = FindObjectOfType<AnimationManager>());
@@ -18,23 +19,30 @@ public class AnimationManager : MonoBehaviour
             instance = this;
         }
     }
+
+    private void Start()
+    {
+        
+    }
     #endregion
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private Animator maleAnimator;
     [SerializeField] private Animator femaleAnimator;
 
+
     private void OnEnable()
     {
-        Observer.startGame += EnableInGameAnimation;
+        Observer.startAnimation += EnableInGameAnimation;
     }
     private void OnDisable()
     {
-
-        Observer.startGame -= DisableInGameAnimation;
-
+        Observer.startAnimation -= DisableInGameAnimation;
     }
     private void EnableInGameAnimation()
     {
+        playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+        maleAnimator = GameObject.FindGameObjectWithTag("Male").GetComponent<Animator>();
+        femaleAnimator = GameObject.FindGameObjectWithTag("Female").GetComponent<Animator>();
         StartCoupleAnimation();
         playerAnimator.SetBool("Move", true);
     }

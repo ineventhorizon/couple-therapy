@@ -8,6 +8,7 @@ public class Observer
     public static UnityAction<float> updateLove;
     public static UnityAction startPlayerMovement;
     public static UnityAction startGame;
+    public static UnityAction startAnimation;
     public static UnityAction playerFinalWalk;
     public static UnityAction coupleFinalWalk;
     public static UnityAction<Vector3> finalMoveTowards;
