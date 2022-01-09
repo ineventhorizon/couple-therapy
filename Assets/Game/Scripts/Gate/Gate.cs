@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 public class Gate : MonoBehaviour
 {
-    //[SerializeField] List<string> test;
     //false if negative, true if positive
     [SerializeField] public GateType gateType;
     [SerializeField] private TextMeshProUGUI textUI;

@@ -6,16 +6,17 @@ using NaughtyAttributes;
 public class RoadManager : MonoBehaviour
 
 {
-    //TO DO
-    //THIS DOES NOT WORK WITH MULTIPLE SCENES WILL CHANGE
-    //THIS DOES NOT WORK WITH MULTIPLE SCENES WILL CHANGE
-    //THIS DOES NOT WORK WITH MULTIPLE SCENES WILL CHANGE
-    //THIS DOES NOT WORK WITH MULTIPLE SCENES WILL CHANGE
-    //THIS DOES NOT WORK WITH MULTIPLE SCENES WILL CHANGE
+    [SerializeField] private Transform roadParent;
     [SerializeField] private GameObject myRoad;
-    [SerializeField] private Transform parent;
     [SerializeField] private List<GameObject> roads;
-    [SerializeField] public  List<Vector3> roadPath;
+    [SerializeField] public List<Vector3> roadPath;
+
+    [SerializeField] private FinalRoad finalRoad;
+    [SerializeField] private List<GameObject> finalRoads;
+    [BoxGroup("Final Road Settings")]
+    [SerializeField] List<FinalRoadData> finalRoadDataList;
+    [SerializeField] public List<Vector3> finalPath;
+    private bool isThereFinal = false;
     private static RoadManager instance;
     public static RoadManager Instance => instance ?? (instance = instance = FindObjectOfType<RoadManager>());
 
@@ -23,6 +24,11 @@ public class RoadManager : MonoBehaviour
     public float roadLength = 14f;
     [BoxGroup("Road Settings")]
     public int roadCount;
+
+    [BoxGroup("Final Road Settings")]
+    public float finalRoadLength = 14f;
+    [BoxGroup("Final Road Settings")]
+    public int finalRoadCount;
     private void Awake()
     {
         instance = instance ??= this;
@@ -34,7 +40,7 @@ public class RoadManager : MonoBehaviour
     {
         var index = roads.Count == 0 ? 0 : roads.Count ;
         var roadPosition = index * (Vector3.forward*roadLength);
-        var newRoad = Instantiate(myRoad, roadPosition, Quaternion.identity, parent);
+        var newRoad = Instantiate(myRoad, roadPosition, Quaternion.identity, roadParent);
         roads.Add(newRoad);
         roadPath.Add(newRoad.transform.position);
 
@@ -56,8 +62,15 @@ public class RoadManager : MonoBehaviour
         {
             DestroyImmediate(roads[i]);
         }
+        for (int i = 0; i < finalRoads.Count; i++)
+        {
+            DestroyImmediate(finalRoads[i]);
+        }
+        isThereFinal = false;
         roads.Clear();
         roadPath.Clear();
+        finalRoads.Clear();
+        finalPath.Clear();
     }
 
     [Button("Create Multiple")]
@@ -68,4 +81,25 @@ public class RoadManager : MonoBehaviour
             CreateRoad();
         }
     }
+    [Button("Create Final")]
+    void CreateFinal()
+    {
+        if (isThereFinal) return;
+        for (int i = 0; i < finalRoadCount; i++)
+        {
+            CreateFinalRoad(i);
+        }
+        isThereFinal = true;
+    }
+
+    private void CreateFinalRoad(int i)
+    {
+        var index = roads.Count == 0 ? 0 : roads.Count-1;
+        var finalRoadPosition = roads[index].transform.position + ((i+1)*Vector3.forward * finalRoadLength);
+        finalRoad.Initialize(finalRoadDataList[i]);    
+        var newRoad = Instantiate(finalRoad, finalRoadPosition, Quaternion.identity, roadParent);
+        finalRoads.Add(newRoad.gameObject);
+        finalPath.Add(newRoad.transform.position);
+    }
+
 }

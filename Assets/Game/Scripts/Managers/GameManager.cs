@@ -38,5 +38,5 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.DisableStartScreen();
         Observer.startPlayerMovement?.Invoke();
         isGameRunning = true;
-    }   
+    }
 }
