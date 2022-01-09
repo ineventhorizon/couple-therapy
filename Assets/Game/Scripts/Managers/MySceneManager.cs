@@ -8,7 +8,7 @@ using NaughtyAttributes;
 public class MySceneManager : MonoBehaviour
 {
     private int currentLevelIndex = 2;
-    private List<AsyncOperation> scenesLoading = new List<AsyncOperation>();
+    private List<AsyncOperation> scenesUnLoading = new List<AsyncOperation>();
     private static MySceneManager instance;
     public static MySceneManager Instance => instance ?? (instance = FindObjectOfType<MySceneManager>());
     private void Awake()
@@ -33,39 +33,54 @@ public class MySceneManager : MonoBehaviour
     [Button]
     public void NextScene()
     {
-        //var index = SceneManager.GetActiveScene().buildIndex;
         UnloadActiveScene();
-        LoadScenes(currentLevelIndex+1);
         currentLevelIndex++;
+        LoadScenes(currentLevelIndex);
+        
     }
 
-    //Unloads Active Scene, Managers and UI
+    //Unloads Active Scene and UI
     private void UnloadActiveScene()
     {
-        //SceneManager.UnloadSceneAsync((int)SceneIndexes.Managers);
-        SceneManager.UnloadSceneAsync((int)SceneIndexes.UI);
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        scenesUnLoading.Add(SceneManager.UnloadSceneAsync((int)SceneIndexes.UI));
+        scenesUnLoading.Add(SceneManager.UnloadSceneAsync(currentLevelIndex));
+        StartCoroutine(WaitForSceneUnload());
     }
     private void LoadScenes(int index)
     {
         SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive);
-        AsyncOperation abc = SceneManager.LoadSceneAsync((int)SceneIndexes.UI, LoadSceneMode.Additive);
-        StartCoroutine(WaitForSceneLoad(SceneManager.GetSceneByBuildIndex(index)));
+        AsyncOperation asyncLoadScene = SceneManager.LoadSceneAsync((int)SceneIndexes.UI, LoadSceneMode.Additive);
+        Debug.Log(SceneManager.GetSceneByBuildIndex(index).name);
+        StartCoroutine(WaitForSceneLoad(asyncLoadScene));
     }
-    public IEnumerator WaitForSceneLoad(Scene scene)
+    public IEnumerator WaitForSceneLoad(AsyncOperation scene)
     {
-        while (!scene.isLoaded)
+        while (!scene.isDone)
         {
+            Debug.Log($"is started{scene.isDone}");
             yield return null;
         }
         Debug.Log("Setting active scene..");
-        SceneManager.SetActiveScene(scene);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(currentLevelIndex));
     }
 
-    public void RestarActivetScene()
+    public IEnumerator WaitForSceneUnload()
+    {
+        for(int i = 0; i < scenesUnLoading.Count; i++)
+        {
+            while (!scenesUnLoading[i].isDone)
+            {
+                yield return null;
+            }
+        }
+        
+    }
+
+
+    public void RestarActiveScene()
     {
         UnloadActiveScene();
-        LoadScenes(SceneManager.GetActiveScene().buildIndex);
+        LoadScenes(currentLevelIndex);
     }
 
     

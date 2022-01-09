@@ -41,4 +41,14 @@ public class UIManager : UIBase
     {
         EndScreen.Instance.EnablePanel();
     }
+
+    public void DisableFailScreen()
+    {
+        FailScreen.Instance.DisablePanel();
+    }
+
+    public void ActivateFailScreen()
+    {
+        FailScreen.Instance.EnablePanel();
+    }
 }

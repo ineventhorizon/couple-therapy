@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game Over");
+        UIManager.Instance.ActivateFailScreen();
         //SCENE MANAGER RELOAD CURRENT SCENE
     }
     public void NextLevel()
