@@ -24,13 +24,11 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         Observer.startGame += StartGame;
-        Observer.finalWalk += FinalWalk;
     }
 
     private void OnDisable()
     {
         Observer.startGame -= StartGame;
-        Observer.finalWalk -= FinalWalk;
     }
 
     [Button]
@@ -42,14 +40,9 @@ public class GameManager : MonoBehaviour
         isGameRunning = true;
     }
 
-    public void FinalWalk()
+    public void GameEnded()
     {
         isGameRunning = false;
-        Debug.Log("Game ended!");
-        var posOffSet = LoveBar.currLove * 3.5f;
-        var newPos =  posOffSet* Vector3.forward;
-        Debug.Log($"{newPos} {LoveBar.currLove}");
-        Observer.finalMoveTowards?.Invoke(newPos);
     }
 
     public void GameOver()

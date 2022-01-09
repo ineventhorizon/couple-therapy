@@ -24,13 +24,10 @@ public class StartScreen : UIBase
             instance = this;
         }
     }
-
-    // Update is called once per frame
-    void Update()
+    public void StartGame()
     {
-        if (Input.GetMouseButtonDown(0)) Observer.startGame?.Invoke();
+        Observer.startGame?.Invoke();
     }
-
     private void Start()
     {
         StartMenuAnimation();
