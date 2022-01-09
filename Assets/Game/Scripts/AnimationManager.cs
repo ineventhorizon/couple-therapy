@@ -74,14 +74,15 @@ public class AnimationManager : MonoBehaviour
         femaleAnimator.SetLayerWeight(1, 1);
         if (type == GateType.Positive)
         {
-            femaleAnimator.SetFloat("Reaction", 0);
-            maleAnimator.SetFloat("Reaction", 0);
+            int randPosReaction = Random.Range(0,2);
+            femaleAnimator.SetFloat("Reaction", (float)randPosReaction);
+            maleAnimator.SetFloat("Reaction", (float) randPosReaction);
 
         }
         else
         {
-            femaleAnimator.SetFloat("Reaction", 1);
-            maleAnimator.SetFloat("Reaction", 1);
+            femaleAnimator.SetFloat("Reaction", 3);
+            maleAnimator.SetFloat("Reaction", 3);
         }
     }
 }
