@@ -4,6 +4,21 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
+    #region Singleton
+    private static AnimationManager instance;
+    public static AnimationManager Instance => instance ?? (instance = FindObjectOfType<AnimationManager>());
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+    #endregion
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private Animator maleAnimator;
     [SerializeField] private Animator femaleAnimator;
@@ -20,38 +35,53 @@ public class AnimationManager : MonoBehaviour
     }
     private void EnableInGameAnimation()
     {
+        StartCoupleAnimation();
         playerAnimator.SetBool("Move", true);
-        maleAnimator.SetBool("Move", true);
-        femaleAnimator.SetBool("Move", true);
     }
     private void DisableInGameAnimation()
     {
         playerAnimator.SetBool("Move", false);
+        StopCoupleAnimation();
+    }
+    public void EnableGameOverAnim()
+    {
+        playerAnimator.SetBool("IsGameOver", true);
+    }
+
+    public void StopCoupleAnimation()
+    {
         maleAnimator.SetBool("Move", false);
         femaleAnimator.SetBool("Move", false);
     }
-
-    private void EnableGameOverAnim()
+    public void StartCoupleAnimation()
     {
-        playerAnimator.SetBool("IsGameOver", true);
-        femaleAnimator.SetBool("IsGameOver", true);
-        maleAnimator.SetBool("IsGameOver", true);
+        maleAnimator.SetBool("Move", true);
+        femaleAnimator.SetBool("Move", true);
     }
 
-    private void EnableWinAnim()
+    public void EnableWinAnim()
     {
         int randReaction = Random.Range(0, 3);
         playerAnimator.SetFloat("Reaction", (float)randReaction);
         playerAnimator.SetBool("IsWinState", true);
     }
 
-    private void EnableReactions(int type)
+    public void EnableReactions(GateType type)
     {
-
-        if (type == 0)
+        if (type == GateType.Positive)
         {
-            // play neg reactions
+            femaleAnimator.SetFloat("Reaction", 0);
+            maleAnimator.SetFloat("Reaction", 0);
+
         }
-            // play pos reaction
+        else
+        {
+            femaleAnimator.SetFloat("Reaction", 1);
+            maleAnimator.SetFloat("Reaction", 1);
+        }
+
+        
+        maleAnimator.SetLayerWeight(1, 1);
+        femaleAnimator.SetLayerWeight(1, 1);
     }
 }

@@ -47,6 +47,7 @@ public class Gate : MonoBehaviour
             var point = textType == TextType.Positive ? 3 : -3;
             Observer.updateLove?.Invoke(point);
             Observer.PlayParticle?.Invoke(ParticleType.Gate, (int)gateType);
+            AnimationManager.Instance.EnableReactions(gateType);
         }
     }
 }

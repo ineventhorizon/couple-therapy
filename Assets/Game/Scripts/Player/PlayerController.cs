@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
         if (LoveBar.currLove == 0)
         {
             GameManager.Instance.GameOver();
+            AnimationManager.Instance.EnableGameOverAnim();
             yield break;
         }
         while (true)
@@ -80,6 +81,7 @@ public class PlayerController : MonoBehaviour
             }
             yield return null;
         }
+        AnimationManager.Instance.EnableWinAnim();
         GameManager.Instance.NextLevel();
     }
 }

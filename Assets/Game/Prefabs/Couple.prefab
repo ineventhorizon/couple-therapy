@@ -5032,7 +5032,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxLove: 0
-  currLove: 0
   loveBar: {fileID: 477457641}
   gradient:
     serializedVersion: 2
