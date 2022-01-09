@@ -49,10 +49,24 @@ public class UIParticle : MonoBehaviour
 
     private void PlayGateParticle(int particleIndex)
     {
-        if(particleIndex == (int) CollectableType.Positive) heart.Play();
+        if (particleIndex == (int)CollectableType.Positive)
+        {
+            heart.Play();
+        }
+        else
+        {
+            brokenHeart.Play();
+        }
     }
     private void PlayCollectableParticle(int particleIndex)
     {
-        if(particleIndex == (int) GateType.Positive) heart.Play();
+        if (particleIndex == (int)GateType.Positive)
+        {
+            heart.Play();
+        }
+        else
+        {
+            brokenHeart.Play();
+        }
     }
 }
