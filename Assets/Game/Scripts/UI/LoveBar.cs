@@ -9,7 +9,7 @@ public class LoveBar : MonoBehaviour
 {
     // Love Bar Variables
     [SerializeField] private float maxLove;
-    [SerializeField] private float currLove;
+    [SerializeField] public static float currLove;
 
     // Love Bar fill color variables
     [SerializeField] private Image loveBar;

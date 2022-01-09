@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndScreen : MonoBehaviour
+public class EndScreen : UIBase
 {
 
     //TO DO
@@ -18,16 +18,5 @@ public class EndScreen : MonoBehaviour
         {
             instance = this;
         }
-    }
-    public void DisableEndScreen()
-    {
-        this.gameObject.SetActive(false);
-        this.enabled = false;
-    }
-
-    public void ActivateEndScreen()
-    {
-        this.gameObject.SetActive(true);
-        this.enabled = true;
     }
 }

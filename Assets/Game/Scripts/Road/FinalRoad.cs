@@ -18,12 +18,18 @@ public class FinalRoad : MonoBehaviour
         //SET TEXT
     }
 
+    
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            if (isFinal)
+            {
+                Observer.finalWalk?.Invoke(); 
+            }
             Debug.Log($"Multiplier {roadData.multiplier}");
-            if (isFinal) Debug.Log("Game Ended");  
+            
         }
     }
 }

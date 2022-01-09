@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class StartScreen : MonoBehaviour
+public class StartScreen : UIBase
 {
     [SerializeField] private Image logoImage;
     [SerializeField] private Image tapToPlayImage;
@@ -34,21 +34,6 @@ public class StartScreen : MonoBehaviour
     private void Start()
     {
         StartMenuAnimation();
-    }
-
-    public void DisableStartScreen()
-    {
-        this.gameObject.SetActive(false);
-        this.enabled = false;
-    }
-
-    public void ActivateStartScreen()
-    {
-        this.gameObject.SetActive(true);
-        this.enabled = true;
-        DOTween.Kill(uid);
-        sequence = null;
-
     }
 
     private void StartMenuAnimation()

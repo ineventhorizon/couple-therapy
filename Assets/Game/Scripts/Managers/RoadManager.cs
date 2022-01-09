@@ -102,12 +102,11 @@ public class RoadManager : MonoBehaviour
     {
         var index = roads.Count == 0 ? 0 : roads.Count-1;
         var finalRoadPosition = roads[index].transform.position + ((i+1)*Vector3.forward * finalRoadLength);
-        finalRoad.isFinal = i == finalRoadDataList.Count - 1 ? true : false;
+        finalRoad.isFinal = i == 0;
         finalRoad.Initialize(finalRoadDataList[i]);    
         var newRoad = Instantiate(finalRoad, finalRoadPosition, Quaternion.identity, roadParent);
         finalRoads.Add(newRoad.gameObject);
         finalPath.Add(newRoad.transform.position);
-        
     }
 
 }
