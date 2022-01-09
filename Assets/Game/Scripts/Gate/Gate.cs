@@ -19,7 +19,7 @@ public class Gate : MonoBehaviour
 
     void GetText()
     {
-        var randomString = gateText.GetTextWithType(textType);
+        var randomString = gateType != GateType.Random ? gateText.GetTextWithType(textType) : "?";
         textUI.SetText(randomString);
     }
 

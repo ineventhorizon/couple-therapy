@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
 
-public class UIManager : UIBase
+public class UIManager : MonoBehaviour
 {
     #region Singleton
     private static UIManager instance;

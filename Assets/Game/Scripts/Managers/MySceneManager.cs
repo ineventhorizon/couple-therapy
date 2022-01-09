@@ -23,20 +23,22 @@ public class MySceneManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log($"Total {SceneManager.sceneCount}");
-        //LoadScenes(2);
-    }
 
     [Button]
     public void NextScene()
     {
+        //Check if there are no more levels to load
+        if (currentLevelIndex + 1 == SceneManager.sceneCountInBuildSettings) return;
         UnloadActiveScene();
         currentLevelIndex++;
         LoadScenes(currentLevelIndex);
-        
+    }
+
+    [Button]
+    public void RestarActiveScene()
+    {
+        UnloadActiveScene();
+        LoadScenes(currentLevelIndex);
     }
 
     //Unloads Active Scene and UI
@@ -57,7 +59,6 @@ public class MySceneManager : MonoBehaviour
     {
         while (!scene.isDone)
         {
-            Debug.Log($"is started{scene.isDone}");
             yield return null;
         }
         Debug.Log("Setting active scene..");
@@ -73,15 +74,5 @@ public class MySceneManager : MonoBehaviour
                 yield return null;
             }
         }
-        
     }
-
-
-    public void RestarActiveScene()
-    {
-        UnloadActiveScene();
-        LoadScenes(currentLevelIndex);
-    }
-
-    
 }

@@ -6,6 +6,7 @@ public class CoupleController : MonoBehaviour
 {
     [SerializeField] private Transform sideMovementRoot;
     [SerializeField] private Transform player;
+    [SerializeField] private float gapWithPlayer = 4f;
     private bool reachedFinal = false;
 
     private void OnEnable()
@@ -23,13 +24,13 @@ public class CoupleController : MonoBehaviour
     }
     private void HandleSideMovements()
     {
-        sideMovementRoot.position = Vector3.Lerp(player.position + Vector3.forward * 4f, sideMovementRoot.position, 0.6f);
+        transform.position = Vector3.Lerp(player.position+Vector3.forward*gapWithPlayer, transform.position, 0.7f);
     }
 
     private void FinalMoveAside()
     {
         reachedFinal = true;
-        sideMovementRoot.position = Vector3.Lerp(sideMovementRoot.position + Vector3.back * 5f, sideMovementRoot.position, 0.6f);
+        transform.position = Vector3.Lerp(sideMovementRoot.position + Vector3.back * 5f, sideMovementRoot.position, 0.6f);
         AnimationManager.Instance.StopCoupleAnimation();
     }
 }

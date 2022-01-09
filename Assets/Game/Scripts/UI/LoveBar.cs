@@ -10,6 +10,7 @@ public class LoveBar : MonoBehaviour
     // Love Bar Variables
     [SerializeField] private float maxLove;
     [SerializeField] public static float currLove;
+    private float test;
 
     // Love Bar fill color variables
     [SerializeField] private Image loveBar;
@@ -30,16 +31,19 @@ public class LoveBar : MonoBehaviour
 
     private void Start()
     {
-        SetMaxLove(30);
+        InitializeLoveValue(0, 30);
+        
     }
 
-    public void SetMaxLove(float value)
+    public void InitializeLoveValue(float valueMin, float valueMax)
     {
-        maxLove = value;
+        maxLove = valueMax;
+        currLove = valueMin;
     }
 
     public void UpdateLoveBar(float value)
     {
+        Debug.Log($"Changed love: {value}");
         currLove += value;
         if (currLove < 0) currLove = 0;
         if (currLove > maxLove) currLove = maxLove;
@@ -49,6 +53,8 @@ public class LoveBar : MonoBehaviour
         PopUpText(loveAmount);
         loveBar.fillAmount = loveAmount;
         loveBar.color = gradient.Evaluate(loveAmount);
+
+        test = currLove;
     }
 
     private void PopUpText(float loveAmount)
