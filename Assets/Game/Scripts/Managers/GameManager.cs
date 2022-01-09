@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
     }
     public void NextLevel()
     {
+
         UIManager.Instance.ActivateEndScreen();
         AnimationManager.Instance.EnableWinAnim();
         //SCENEMANAGER NEXT SCENE

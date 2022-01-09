@@ -19,4 +19,9 @@ public class EndScreen : UIBase
             instance = this;
         }
     }
+
+    public void NextLevelClick()
+    {
+        MySceneManager.Instance.NextScene();
+    }
 }
