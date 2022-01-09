@@ -14,6 +14,7 @@ public class AnimationManager : MonoBehaviour
     }
     private void OnDisable()
     {
+
         Observer.startGame -= DisableInGameAnimation;
 
     }
@@ -28,5 +29,29 @@ public class AnimationManager : MonoBehaviour
         playerAnimator.SetBool("Move", false);
         maleAnimator.SetBool("Move", false);
         femaleAnimator.SetBool("Move", false);
+    }
+
+    private void EnableGameOverAnim()
+    {
+        playerAnimator.SetBool("IsGameOver", true);
+        femaleAnimator.SetBool("IsGameOver", true);
+        maleAnimator.SetBool("IsGameOver", true);
+    }
+
+    private void EnableWinAnim()
+    {
+        int randReaction = Random.Range(0, 3);
+        playerAnimator.SetFloat("Reaction", (float)randReaction);
+        playerAnimator.SetBool("IsWinState", true);
+    }
+
+    private void EnableReactions(int type)
+    {
+
+        if (type == 0)
+        {
+            // play neg reactions
+        }
+            // play pos reaction
     }
 }
