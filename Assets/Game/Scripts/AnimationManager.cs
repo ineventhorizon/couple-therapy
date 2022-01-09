@@ -52,6 +52,8 @@ public class AnimationManager : MonoBehaviour
     {
         maleAnimator.SetBool("Move", false);
         femaleAnimator.SetBool("Move", false);
+        maleAnimator.SetLayerWeight(1, 0);
+        femaleAnimator.SetLayerWeight(1, 0);
     }
     public void StartCoupleAnimation()
     {
@@ -68,6 +70,8 @@ public class AnimationManager : MonoBehaviour
 
     public void EnableReactions(GateType type)
     {
+        maleAnimator.SetLayerWeight(1, 1);
+        femaleAnimator.SetLayerWeight(1, 1);
         if (type == GateType.Positive)
         {
             femaleAnimator.SetFloat("Reaction", 0);
@@ -79,9 +83,5 @@ public class AnimationManager : MonoBehaviour
             femaleAnimator.SetFloat("Reaction", 1);
             maleAnimator.SetFloat("Reaction", 1);
         }
-
-
-        maleAnimator.SetLayerWeight(1, 1);
-        femaleAnimator.SetLayerWeight(1, 1);
     }
 }
