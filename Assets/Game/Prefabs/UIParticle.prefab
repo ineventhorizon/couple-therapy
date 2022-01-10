@@ -45,4 +45,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brokenHeart: {fileID: 0}
   heart: {fileID: 0}
+  gatePosParticles:
+  - {fileID: 0}
+  gateNegParticles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   isParticlePlay: 0

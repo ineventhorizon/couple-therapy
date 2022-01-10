@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a00bd7b48d6a8742b887fbcfe9bfe4a, type: 3}
+  m_Name: ParticleData
+  m_EditorClassIdentifier: 
+  gatePosParticles:
+  - {fileID: 5640399025636855378, guid: f2c78a24cd68cdc4489d53d11eb96087, type: 3}
+  gateNegParticles:
+  - {fileID: 4933058063694034811, guid: ff41d11347f5a3b4982177a5e91c2024, type: 3}
+  - {fileID: 676766359059582997, guid: d2d9f535e3ef28449b1a9430c85be6b2, type: 3}
+  - {fileID: 8303855130173511565, guid: bf61b5792319f794a8592f2d2d1e29e5, type: 3}
+  - {fileID: 7782398714945440544, guid: c2c756e1f02eb7442a455b8b1f81171e, type: 3}
+  heart: {fileID: 788765410863962103, guid: a0eb367e356cdc44c9e7420ddccbff21, type: 3}
+  brokenHeart: {fileID: 7963408256666785119, guid: dce1a48b8dd303e4d9c8375db0d2cba7, type: 3}
