@@ -58,8 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2cddba719ceeb438bd8a6075bf0581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  value: -2
+  type: 1
+  value: 2
   rotationY: 360
   moveY: 1.8
 --- !u!1 &6636913272100878305

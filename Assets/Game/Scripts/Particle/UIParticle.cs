@@ -54,13 +54,13 @@ public class UIParticle : MonoBehaviour
     {
         if (particleIndex == (int)CollectableType.Positive)
         {
-            var rand = Random.Range(0, gatePosParticles.Length);
+            var rand = Random.Range(0, gatePosParticles.Length - 1);
             gatePosParticles[rand].Play();
 
         }
         else
         {
-            var rand = Random.Range(0, gateNegParticles.Length);
+            var rand = Random.Range(0, gateNegParticles.Length - 1);
             gateNegParticles[rand].Play();
         }
     }
