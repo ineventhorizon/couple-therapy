@@ -2752,7 +2752,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Deneme
+  m_text: NEUTRAL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f5a251968857c849bbdb63b8590a223, type: 2}
   m_sharedMaterial: {fileID: -1273760421660847274, guid: 8f5a251968857c849bbdb63b8590a223, type: 2}
