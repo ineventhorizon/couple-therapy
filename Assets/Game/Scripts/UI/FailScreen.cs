@@ -20,6 +20,6 @@ public class FailScreen : UIBase
     
     public void RestartLevelClick()
     {
-        MySceneManager.Instance.RestarActiveScene();
+        MySceneManager.Instance.RestartActiveScene();
     }
 }

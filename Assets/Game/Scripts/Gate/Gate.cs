@@ -9,6 +9,7 @@ public class Gate : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textUI;
     [SerializeField] private GateTexts gateText;
     [SerializeField] private TextType textType;
+    private string text;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,9 @@ public class Gate : MonoBehaviour
 
     void GetText()
     {
+        
         var randomString = gateType != GateType.Random ? gateText.GetTextWithType(textType) : "?";
+        textUI.fontSize = randomString.Length < 3 ? 3f : 0.65f;
         textUI.SetText(randomString);
     }
 

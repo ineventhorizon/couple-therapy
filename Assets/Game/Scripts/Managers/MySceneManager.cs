@@ -35,7 +35,7 @@ public class MySceneManager : MonoBehaviour
     }
 
     [Button]
-    public void RestarActiveScene()
+    public void RestartActiveScene()
     {
         UnloadActiveScene();
         LoadScenes(currentLevelIndex);
