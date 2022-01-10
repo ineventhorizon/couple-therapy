@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDictionary:
     positiveText:
-    - Watch NBA game together.
-    - Go out for a dinner.
+    - Watch NBA game together
+    - Go out for a dinner
     - Europe trip
     - Dance course
     - Netflix and chill

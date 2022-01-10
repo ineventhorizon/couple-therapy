@@ -31,7 +31,7 @@ public class LoveBar : MonoBehaviour
 
     private void Start()
     {
-        InitializeLoveValue(0, 30);
+        InitializeLoveValue(0, maxLove);
         
     }
 

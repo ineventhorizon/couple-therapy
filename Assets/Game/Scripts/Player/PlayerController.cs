@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         GameManager.Instance.GameEnded();
         Debug.Log("Game ended!");
-        var posOffSet = LoveBar.currLove * 3.5f;
+        var posOffSet = LoveBar.currLove * 1.75f;
         var newPos = posOffSet * Vector3.forward;
         var targetPosition = newPos;
         targetPosition += transform.position;

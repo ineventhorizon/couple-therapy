@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart
       objectReference: {fileID: 0}
+    - target: {fileID: 1731531552533976292, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
 --- !u!4 &23584723 stripped
@@ -312,6 +316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1731531552533976292, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7622837360234724053, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
       propertyPath: brokenHeart
       value: 
@@ -372,6 +380,10 @@ PrefabInstance:
     - target: {fileID: 1731531552533976292, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
       propertyPath: m_Name
       value: Heart (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1731531552533976292, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7622837360234724053, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
       propertyPath: brokenHeart
@@ -434,6 +446,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1731531552533976292, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7622837360234724053, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
       propertyPath: brokenHeart
       value: 
@@ -494,6 +510,10 @@ PrefabInstance:
     - target: {fileID: 2294272797320412694, guid: bb7a1dc0b8fa392439d14869a3975576, type: 3}
       propertyPath: m_Name
       value: BrokenHeart (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294272797320412694, guid: bb7a1dc0b8fa392439d14869a3975576, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7627611302935205957, guid: bb7a1dc0b8fa392439d14869a3975576, type: 3}
       propertyPath: brokenHeart
@@ -612,6 +632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrokenHeart (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2294272797320412694, guid: bb7a1dc0b8fa392439d14869a3975576, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7627611302935205957, guid: bb7a1dc0b8fa392439d14869a3975576, type: 3}
       propertyPath: brokenHeart
       value: 
@@ -672,6 +696,10 @@ PrefabInstance:
     - target: {fileID: 2294272797320412694, guid: bb7a1dc0b8fa392439d14869a3975576, type: 3}
       propertyPath: m_Name
       value: BrokenHeart (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294272797320412694, guid: bb7a1dc0b8fa392439d14869a3975576, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7627611302935205957, guid: bb7a1dc0b8fa392439d14869a3975576, type: 3}
       propertyPath: brokenHeart
@@ -863,6 +891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1731531552533976292, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7622837360234724053, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
       propertyPath: brokenHeart
       value: 
@@ -923,6 +955,10 @@ PrefabInstance:
     - target: {fileID: 1731531552533976292, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
       propertyPath: m_Name
       value: Heart (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1731531552533976292, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7622837360234724053, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
       propertyPath: brokenHeart
@@ -1136,6 +1172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1731531552533976292, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7622837360234724053, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
       propertyPath: brokenHeart
       value: 
@@ -1254,6 +1294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ring (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4575166740860149380, guid: 53ecf2abb05320f4d9a22cde1cfde75a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53ecf2abb05320f4d9a22cde1cfde75a, type: 3}
 --- !u!1001 &1217307898
@@ -1311,6 +1355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ring
       objectReference: {fileID: 0}
+    - target: {fileID: 4575166740860149380, guid: 53ecf2abb05320f4d9a22cde1cfde75a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53ecf2abb05320f4d9a22cde1cfde75a, type: 3}
 --- !u!4 &1217307899 stripped
@@ -1328,6 +1376,10 @@ PrefabInstance:
     - target: {fileID: 5144294271042691175, guid: d71a5d1f4232cda4a82a9e5732d945bd, type: 3}
       propertyPath: m_Name
       value: Gamepad
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144294271042691175, guid: d71a5d1f4232cda4a82a9e5732d945bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5489858047945997021, guid: d71a5d1f4232cda4a82a9e5732d945bd, type: 3}
       propertyPath: m_RootOrder
@@ -1444,6 +1496,10 @@ PrefabInstance:
     - target: {fileID: 2294272797320412694, guid: bb7a1dc0b8fa392439d14869a3975576, type: 3}
       propertyPath: m_Name
       value: BrokenHeart
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294272797320412694, guid: bb7a1dc0b8fa392439d14869a3975576, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7627611302935205957, guid: bb7a1dc0b8fa392439d14869a3975576, type: 3}
       propertyPath: punchScale
@@ -1670,6 +1726,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wine
       objectReference: {fileID: 0}
+    - target: {fileID: 885642610465618416, guid: 3654ed59d6d9a5540a7887434d2e8bce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3712978328922532304, guid: 3654ed59d6d9a5540a7887434d2e8bce, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -1894,6 +1954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1731531552533976292, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7622837360234724053, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
       propertyPath: brokenHeart
       value: 
@@ -1954,6 +2018,10 @@ PrefabInstance:
     - target: {fileID: 2294272797320412694, guid: bb7a1dc0b8fa392439d14869a3975576, type: 3}
       propertyPath: m_Name
       value: BrokenHeart (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294272797320412694, guid: bb7a1dc0b8fa392439d14869a3975576, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7627611302935205957, guid: bb7a1dc0b8fa392439d14869a3975576, type: 3}
       propertyPath: brokenHeart
@@ -2194,6 +2262,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sock
       objectReference: {fileID: 0}
+    - target: {fileID: 1160128910551602354, guid: 44b20ad25c14bf8439c040dce8bf2d34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1160128910551602359, guid: 44b20ad25c14bf8439c040dce8bf2d34, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2419,6 +2491,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1731531552533976292, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7622837360234724053, guid: 53f92a31215c9ae4bb1b02a440e1d6c4, type: 3}
       propertyPath: brokenHeart
       value: 
@@ -2561,6 +2637,10 @@ PrefabInstance:
     - target: {fileID: 8988902394418208850, guid: 3878dae2808f03143a8730cdc7bf0efc, type: 3}
       propertyPath: m_Name
       value: Watch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988902394418208850, guid: 3878dae2808f03143a8730cdc7bf0efc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8988902394418208853, guid: 3878dae2808f03143a8730cdc7bf0efc, type: 3}
       propertyPath: m_RootOrder
