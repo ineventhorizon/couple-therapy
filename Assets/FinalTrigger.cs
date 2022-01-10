@@ -8,7 +8,6 @@ public class FinalTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Observer.playerFinalWalk?.Invoke();
             Observer.coupleFinalWalk?.Invoke();
         }
     }

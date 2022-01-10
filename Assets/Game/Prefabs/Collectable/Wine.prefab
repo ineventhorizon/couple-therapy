@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 3507851638515690735}
   - component: {fileID: 1678315659415459877}
   - component: {fileID: 435366806477553458}
+  - component: {fileID: 3712978328922532304}
   m_Layer: 0
   m_Name: Wine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &504895668883612490
 Transform:
   m_ObjectHideFlags: 0
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885642610465618416}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -0.546, y: 8.37, z: 18.56}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3507851638515690735
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -100,3 +101,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   value: 2
+  rotationY: 360
+  moveY: 2
+--- !u!65 &3712978328922532304
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885642610465618416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21505138, y: 0.63026, z: 0.5241021}
+  m_Center: {x: 0.010224688, y: 0.10881712, z: 0.03931966}

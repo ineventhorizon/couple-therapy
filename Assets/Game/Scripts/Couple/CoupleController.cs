@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class CoupleController : MonoBehaviour
 {
@@ -20,17 +21,25 @@ public class CoupleController : MonoBehaviour
     }
     void Update()
     {
-        if(!reachedFinal) HandleSideMovements();
+        if (!reachedFinal) HandleSideMovements();
     }
     private void HandleSideMovements()
     {
-        transform.position = Vector3.Lerp(player.position+Vector3.forward*gapWithPlayer, transform.position, 0.7f);
+        transform.position = Vector3.Lerp(player.position + Vector3.forward * gapWithPlayer, transform.position, 0.7f);
     }
 
     private void FinalMoveAside()
     {
         reachedFinal = true;
-        transform.position = Vector3.Lerp(sideMovementRoot.position + Vector3.back * 5f, sideMovementRoot.position, 0.6f);
-        AnimationManager.Instance.StopCoupleAnimation();
+        transform.DOLocalMoveX(-2.6f, 1f, false);
+
+        if (LoveBar.currLove > 0)
+        {
+            AnimationManager.Instance.EnableCoupleWinAnim();
+        }
+        else
+        {
+            AnimationManager.Instance.EnableGameOverAnim();
+        }
     }
 }

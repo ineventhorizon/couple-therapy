@@ -7,7 +7,9 @@ public class Collectable : MonoBehaviour
 {
     [SerializeField] public CollectableType type;
     [SerializeField] private float value;
-    [SerializeField] Vector3 animationRot = new Vector3(0, 180, 0);
+    [SerializeField] private float rotationY = 360f;
+
+    [SerializeField] private float moveY;
 
     private void Start()
     {
@@ -24,14 +26,14 @@ public class Collectable : MonoBehaviour
             Destroy(this.gameObject);
             var tmpValue = type == CollectableType.Positive ? value : -value;
             Observer.updateLove?.Invoke(tmpValue);
-            Observer.PlayParticle?.Invoke(ParticleType.Collectable,(int)type);
+            Observer.PlayParticle?.Invoke(ParticleType.Collectable, (int)type);
         }
     }
 
     private void HandleAnimation()
     {
-        transform.DOLocalMoveY(2f, 1f, false).SetLoops(-1, LoopType.Yoyo);
-        transform.DORotate(animationRot, 2f, RotateMode.Fast).SetLoops(-1).SetEase(Ease.Linear);
+        transform.DOLocalMoveY(moveY, 1f, false).SetLoops(-1, LoopType.Yoyo);
+        transform.DOLocalRotate(Vector3.up * rotationY, 3f, RotateMode.FastBeyond360).SetLoops(-1).SetEase(Ease.Linear);
     }
 }
 

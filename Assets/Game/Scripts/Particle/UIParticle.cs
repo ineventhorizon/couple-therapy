@@ -23,6 +23,9 @@ public class UIParticle : MonoBehaviour
     [SerializeField] ParticleSystem brokenHeart;
     [SerializeField] ParticleSystem heart;
 
+    [SerializeField] private ParticleSystem[] gatePosParticles;
+    [SerializeField] private ParticleSystem[] gateNegParticles;
+
     [SerializeField] private bool isParticlePlay;
 
     private void OnEnable()
@@ -51,11 +54,14 @@ public class UIParticle : MonoBehaviour
     {
         if (particleIndex == (int)CollectableType.Positive)
         {
-            heart.Play();
+            var rand = Random.Range(0, gatePosParticles.Length);
+            gatePosParticles[rand].Play();
+
         }
         else
         {
-            brokenHeart.Play();
+            var rand = Random.Range(0, gateNegParticles.Length);
+            gateNegParticles[rand].Play();
         }
     }
     private void PlayCollectableParticle(int particleIndex)

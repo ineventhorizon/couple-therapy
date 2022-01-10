@@ -110,3 +110,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   value: 4
+  animationRot: {x: 0, y: 180, z: 0}
+  punchScale: 0.015
+  moveY: 2

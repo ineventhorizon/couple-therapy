@@ -3145,9 +3145,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2740898800390406499, guid: d71a5d1f4232cda4a82a9e5732d945bd, type: 3}
+      propertyPath: value
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5144294271042691175, guid: d71a5d1f4232cda4a82a9e5732d945bd, type: 3}
       propertyPath: m_Name
       value: Gamepad
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144294271042691175, guid: d71a5d1f4232cda4a82a9e5732d945bd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5489858047945997021, guid: d71a5d1f4232cda4a82a9e5732d945bd, type: 3}
       propertyPath: m_RootOrder

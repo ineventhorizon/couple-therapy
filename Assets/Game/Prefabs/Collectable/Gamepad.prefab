@@ -114,4 +114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  value: -2
+  value: 2
+  rotationY: 360
+  moveY: 2

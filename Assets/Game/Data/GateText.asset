@@ -14,15 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDictionary:
     positiveText:
-    - positive 1
-    - positive 2
-    - positive 3
-    - positive 4
+    - Watch NBA game together.
+    - Go out for a dinner.
+    - Europe trip
+    - Dance course
+    - Netflix and chill
+    - Go shopping
+    - Go for a walk together
+    - Gift her a necklace
+    - Surprise birthday party
+    - Breakfast in bed
     negativeText:
-    - negative 1
-    - negative 2
-    - negative 3
-    - negative 4
+    - Shut down his PC
+    - Flirt with coworker
+    - Ignore texts
+    - Ignore calls
+    - Forget your anniversary
+    - No gift on valentine day
+    - Talk about your Job
+    - Arrive home late
     neutralText:
     - neutral 1
     - neutral 2

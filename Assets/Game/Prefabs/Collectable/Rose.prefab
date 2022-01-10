@@ -112,3 +112,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   value: 2
+  rotationY: 360
+  moveY: 1.6
